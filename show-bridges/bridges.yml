@@ -1,0 +1,6 @@
+- hosts: vewlc
+  tasks:
+  - name: Show bridges
+    shell: brctl show
+    register: bridges
+  - debug: var=bridges.stdout_lines
